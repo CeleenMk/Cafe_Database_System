@@ -1,0 +1,6 @@
+employee_id,first_name,last_name,role,manager_id
+1,John,Smith,Manager,123456789
+2,Alice,Johnson,Cashier,NULL
+3,Bob,Williams,Cook,NULL
+4,Susan,Brown,Waiter,Null
+5,David,Lee,Cashier,NULL
