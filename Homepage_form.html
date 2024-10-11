@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafe Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #e4e2e2; /* Light gray background */
+        }
+
+        /* Sidebar styling */
+        .sidebar {
+            height: 100%;
+            width: 250px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #8b553f; /* Darker sidebar background color */
+            overflow-x: hidden;
+            transition: 0.3s; /* Smooth transition when opening/closing */
+            padding-top: 60px;
+        }
+
+        /* Closed sidebar width */
+        .sidebar.closed {
+            width: 0;
+        }
+
+        /* Sidebar title and hamburger icon */
+        .sidebar .sidebar-title {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 250px;
+            background-color: #8b553f; /* Match the sidebar background */
+            color: white; /* White text color */
+            text-align: center;
+            padding: 20px;
+            font-size: 20px;
+            transition: 0.3s;
+        }
+
+        .sidebar.closed .sidebar-title {
+            width: 0;
+            padding: 0;
+            opacity: 0;
+        }
+
+        /* Links in sidebar */
+        .sidebar a {
+            padding: 15px 20px;
+            text-decoration: none;
+            font-size: 18px;
+            color: white; /* Sidebar links font color set to white */
+            display: block;
+            transition: 0.3s;
+        }
+
+        /* Hover effect for sidebar links */
+        .sidebar a:hover {
+            background-color: #575757; /* Slightly darker gray for hover */
+        }
+
+        /* Hamburger icon */
+        .hamburger {
+            font-size: 30px;
+            cursor: pointer;
+            color: white; /* White hamburger icon */
+            position: absolute;
+            top: 15px;
+            right: 15px;
+        }
+
+        /* Main content */
+        .main-content {
+            margin-left: 250px;
+            padding: 20px;
+            transition: margin-left 0.3s;
+        }
+
+        /* Adjust main content when sidebar is closed */
+        .sidebar.closed ~ .main-content {
+            margin-left: 0;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <div id="sidebar" class="sidebar">
+        <div class="sidebar-title">
+            <span class="hamburger" onclick="toggleSidebar()">&#9776;</span>
+            Dashboard
+        </div>
+        <a href="employee.html" target="_blank">Employee Management</a>
+        <a href="Customer.html" target="_blank">Customer Management</a>
+    </div>
+
+    <!-- Main content area -->
+    <div class="main-content">
+        <h1>Cafe Database Dashboard</h1>
+        <p>Select any of the forms from the menu on the left to manage the system.</p>
+    </div>
+
+    <!-- JavaScript to toggle the sidebar -->
+    <script>
+        function toggleSidebar() {
+            var sidebar = document.getElementById("sidebar");
+            sidebar.classList.toggle("closed");
+        }
+    </script>
+
+</body>
+</html>
