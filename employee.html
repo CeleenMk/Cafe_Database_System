@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Form</title>
+    <style>
+       /* Add some basic styling */
+       body {
+            background-color: #f0f8ff; /* Light blue background */
+            font-family: Arial, sans-serif; /* Use Arial font */
+        }
+
+        h1 {
+            text-align: center; /* Center the title */
+            color: #333333; /* Dark gray color for the title */
+        }
+
+        table {
+            margin: 0 auto; /* Center the form */
+            background-color: #ffffff; /* White background for the form */
+            padding: 20px;
+            border-radius: 10px; /* Rounded corners for the form */
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Light shadow */
+        }
+
+        td {
+            padding: 10px; /* Add some space around form elements */
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50; /* Green submit button */
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049; /* Darker green when hovered */
+        }  
+    </style>
+</head>
+<body>
+
+    <h1>Add New Employee</h1>
+
+    <form action="#" method="post">
+        <table>
+            <tr>
+                <td><label for="employee_id">Employee ID:</label></td>
+                <td><input type="text" id="employee_id" name="employee_id" required></td>
+            </tr>
+            <tr>
+                <td><label for="first_name">First Name:</label></td>
+                <td><input type="text" id="first_name" name="first_name" required></td>
+            </tr>
+            <tr>
+                <td><label for="last_name">Last Name:</label></td>
+                <td><input type="text" id="last_name" name="last_name" required></td>
+            </tr>
+            <tr>
+                <td><label for="role">Role:</label></td>
+                <td><input type="text" id="role" name="role" required></td>
+            </tr>
+            <tr>
+                <td><label for="manager_id">Manager ID (if applicable):</label></td>
+                <td><input type="text" id="manager_id" name="manager_id"></td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="submit" value="Add Employee"></td>
+            </tr>
+        </table>
+    </form>
+
+</body>
+</html>
