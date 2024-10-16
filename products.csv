@@ -1,0 +1,5 @@
+product_id, inventory_id, product_name, product_price, product_type
+20, 30, Latte, 7, Coffee Drinks
+21, 31, Muffin, 4, Pastry
+22, 32, Croissant, 5, Pastry
+23, 33, Lemonade, 7, Refresher

@@ -1,9 +1,12 @@
 CREATE TABLE Employee (
-    employee_id INT PRIMARY KEY,
+    employee_id INT,
     first_name VARCHAR(15) NOT NULL,
     last_name VARCHAR(15) NOT NULL,
     role VARCHAR(25),
     manager_id INT
+    PRIMARY KEY(employee_id)
+    FOREIGN KEY (manager_id) REFERENCES Employee(employee_id)
+        ON DELETE SET NULL
 );
 
 CREATE TABLE Customer(
@@ -24,7 +27,7 @@ CREATE TABLE Transaction (
      ON DELETE SET NULL,
     FOREIGN KEY (employee_id) REFERENCES Employee(employee_id),
     FOREIGN KEY (order_id) REFERENCES Orders(order_id)
-                 ON DELETE SET NULL 
+        ON DELETE SET NULL 
 );
 
 CREATE TABLE Orders (
@@ -33,7 +36,7 @@ CREATE TABLE Orders (
     order_date DATETIME NOT NULL,
     PRIMARY KEY (order_id),
     FOREIGN KEY (product_id) REFERENCES Product(product_id) 
-                ON DELETE NO ACTION
+        ON DELETE NO ACTION
 );
 
 CREATE TABLE Products (
@@ -44,7 +47,7 @@ CREATE TABLE Products (
     product_type VARCHAR(15) NOT NULL,
     PRIMARY KEY (product_id),
     FOREIGN KEY (inventory_id) REFERENCES Inventory(inventory_id) 
-                  ON DELETE CASCADE
+        ON DELETE CASCADE
 );
 
 CREATE TABLE Inventory (
@@ -74,7 +77,7 @@ CREATE TABLE Stock_Purchases (
     received_by DATETIME NOT NULL,
     PRIMARY KEY (stock_purchase_id),
     FOREIGN KEY (inventory_id) REFERENCES Inventory(inventory_id)
-                ON DELETE NO ACTION,
+        ON DELETE NO ACTION,
     FOREIGN KEY (supplier_id) REFERENCES Supplier(supplier_id)
-                 ON DELETE NO ACTION
+        ON DELETE NO ACTION
 );

@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Products Form</title>
+    <title>Stock Purchases Form</title>
     <style>
         body {
-            background-color: #e4e2e2; /* Light gray background */
+            background-color: #e4e2e2; 
             font-family: Arial, sans-serif;
         }
 
         h1 {
             text-align: center;
-            color: #333333; /* Dark gray for the title */
+            color: #333333; 
         }
 
         table {
@@ -27,7 +27,7 @@
             padding: 10px;
         }
 
-        input[type="text"], input[type="number"] {
+        input[type="text"], input[type="number"], input[type="datetime-local"] {
             padding: 10px;
             width: 100%;
             border: 1px solid #ccc;
@@ -36,7 +36,7 @@
 
         /* Button styling */
         input[type="submit"] {
-            background-color: #8b553f; /* Dark brown (matching the sidebar) */
+            background-color: #8b553f; 
             color: white;
             border: none;
             padding: 10px 20px;
@@ -44,39 +44,42 @@
             cursor: pointer;
         }
 
-        /* Hover effect for the button */
         input[type="submit"]:hover {
-            background-color: #6f4331; /* Slightly darker on hover */
+            background-color: #6f4331; 
         }
     </style>
 </head>
 <body>
-    <h1>Product Form</h1>
-    <form action="add_product.php" method="post">
+    <h1>Stock Purchases Form</h1>
+    <form action="#" method="post">
         <table>
             <tr>
-                <td><label for="product_id">Product ID:</label></td>
-                <td><input type="number" id="product_id" name="product_id" required></td>
+                <td><label for="stock_purchase_id">Stock Purchase ID:</label></td>
+                <td><input type="number" id="stock_purchase_id" name="stock_purchase_id" required></td>
             </tr>
             <tr>
                 <td><label for="inventory_id">Inventory ID:</label></td>
                 <td><input type="number" id="inventory_id" name="inventory_id" required></td>
             </tr>
             <tr>
-                <td><label for="product_name">Product Name:</label></td>
-                <td><input type="text" id="product_name" name="product_name" required></td>
+                <td><label for="supplier_id">Supplier ID:</label></td>
+                <td><input type="number" id="supplier_id" name="supplier_id" required></td>
             </tr>
             <tr>
-                <td><label for="Product_price">Product Price:</label></td>
-                <td><input type="number" id="Product_price" name="Product_price" required></td>
+                <td><label for="purchase_quantity">Purchase Quantity:</label></td>
+                <td><input type="number" id="purchase_quantity" name="purchase_quantity" value="0" min="0" required></td>
             </tr>
             <tr>
-                <td><label for="product_type"> Product Type:</label></td>
-                <td><input type="text" id="product_type" name="product_type" required></td>
+                <td><label for="purchase_date">Purchase Date:</label></td>
+                <td><input type="datetime-local" id="purchase_date" name="purchase_date" required></td>
+            </tr>
+            <tr>
+                <td><label for="received_by">Received By:</label></td>
+                <td><input type="datetime-local" id="received_by" name="received_by" required></td>
             </tr>
             <tr>
                 <td colspan="2" style="text-align: center;">
-                    <input type="submit" value="Add Product">
+                    <input type="submit" value="Add Stock Purchase">
                 </td>
             </tr>
         </table>

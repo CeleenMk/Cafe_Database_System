@@ -1,0 +1,8 @@
+inventory_id,inventory_name,inventory_type,stock_quantity,inventory_price
+30,Coffee Beans,Raw Materials,200,15.50
+31,Milk,Dairy,100,3.00
+32,Fresh Muffin,Baking ,50,2.50
+33,Lemonade Mix,Beverage,30,4.00
+34,Fresh Croissant,Baking ,40,3.75
+35,Sugar,Raw Materials,150,1.25
+36,Tea Leaves,Beverage,80,5.50

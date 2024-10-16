@@ -1,0 +1,5 @@
+supplier_id, supplier_name, phone_number, stock_purchase_id
+1001, Walmart, 123-321-2323, 2001
+1002, Target, 132-453-9321, 2002
+1003, Bakery, 932-924-9482, 2003
+1004, Costco, 933-924-5647, 2004

@@ -1,0 +1,5 @@
+transaction_id, customer_id, employee_id, order_id
+1,1234,3458,50
+2,1235,3458,51
+3,9524,5555,53
+4,4849,4668,52

@@ -8,35 +8,31 @@
         body {
             font-family: Arial, sans-serif;
             margin: 0;
-            background-color: #e4e2e2; /* Light gray background */
+            background-color: #e4e2e2; 
         }
 
-        /* Sidebar styling */
+        /* Sidebar  */
         .sidebar {
             height: 100%;
             width: 250px;
             position: fixed;
             top: 0;
             left: 0;
-            background-color: #8b553f; /* Darker sidebar background color */
+            background-color: #8b553f; 
             overflow-x: hidden;
-            transition: 0.3s; /* Smooth transition when opening/closing */
+            transition: 0.3s; 
             padding-top: 60px;
         }
 
-        /* Closed sidebar width */
         .sidebar.closed {
             width: 0;
         }
 
-        /* Sidebar title and hamburger icon */
+        /* Sidebar title */
         .sidebar .sidebar-title {
-            position: absolute;
-            top: 0;
-            left: 0;
             width: 250px;
-            background-color: #8b553f; /* Match the sidebar background */
-            color: white; /* White text color */
+            background-color: #8b553f; 
+            color: white; 
             text-align: center;
             padding: 20px;
             font-size: 20px;
@@ -54,24 +50,24 @@
             padding: 15px 20px;
             text-decoration: none;
             font-size: 18px;
-            color: white; /* Sidebar links font color set to white */
+            color: white; 
             display: block;
             transition: 0.3s;
         }
 
-        /* Hover effect for sidebar links */
+        
         .sidebar a:hover {
-            background-color: #575757; /* Slightly darker gray for hover */
+            background-color: #575757; 
         }
 
-        /* Hamburger icon */
         .hamburger {
             font-size: 30px;
             cursor: pointer;
-            color: white; /* White hamburger icon */
-            position: absolute;
+            color: white;
+            position: fixed;
             top: 15px;
-            right: 15px;
+            left: 15px;
+            z-index: 1000; /* Ensure it stays on top */
         }
 
         /* Main content */
@@ -81,35 +77,44 @@
             transition: margin-left 0.3s;
         }
 
-        /* Adjust main content when sidebar is closed */
         .sidebar.closed ~ .main-content {
             margin-left: 0;
         }
 
+        iframe {
+            width: 100%;
+            height: 600px;
+            border: none;
+        }
     </style>
 </head>
 <body>
 
+    <!-- Hamburger icon -->
+    <span class="hamburger" onclick="toggleSidebar()">&#9776;</span>
+
     <!-- Sidebar -->
     <div id="sidebar" class="sidebar">
         <div class="sidebar-title">
-            <span class="hamburger" onclick="toggleSidebar()">&#9776;</span>
             Dashboard
         </div>
-        <a href="employee.html" target="_blank">Employee Management</a>
-        <a href="Customer.html" target="_blank">Customer Management</a>
-        <a href="Transaction.html" target="_blank">Transaction Managment</a>
-        <a href="Orders.html" target="_blank">Orders Management</a>
-        <a href="product.html" target="_blank"> Product Management</a>
+        <a href="employee.html" target="content-frame">Employee Management</a>
+        <a href="Customer.html" target="content-frame">Customer Management</a>
+        <a href="Transaction.html" target="content-frame">Transaction Management</a>
+        <a href="Orders.html" target="content-frame">Orders Management</a>
+        <a href="product.html" target="content-frame">Product Management</a>
+        <a href ="inventory.html" target="content-frame">Inventory Management</a>
+        <a href= "supplier.html" target="content-frame">Supplier Management</a>
+        <a href="stock_purchase.html" target="content-frame">Stock Purchases Management</a>
     </div>
 
     <!-- Main content area -->
     <div class="main-content">
         <h1>Cafe Database Dashboard</h1>
         <p>Select any of the forms from the menu on the left to manage the system.</p>
+        <iframe name="content-frame"></iframe>
     </div>
 
-    <!-- JavaScript to toggle the sidebar -->
     <script>
         function toggleSidebar() {
             var sidebar = document.getElementById("sidebar");

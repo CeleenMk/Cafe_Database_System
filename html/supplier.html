@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Order Form</title>
+    <title>Supplier Form</title>
     <style>
         body {
-            background-color: #e4e2e2;
+            background-color: #e4e2e2; /* Light gray background */
             font-family: Arial, sans-serif;
         }
 
         h1 {
             text-align: center;
-            color: #333333;
+            color: #333333; /* Dark gray for the title */
         }
 
         table {
@@ -27,7 +27,7 @@
             padding: 10px;
         }
 
-        input[type="text"], input[type="number"], input[type="datetime-local"] {
+        input[type="text"], input[type="number"] {
             padding: 10px;
             width: 100%;
             border: 1px solid #ccc;
@@ -44,30 +44,35 @@
             cursor: pointer;
         }
 
+        /* Hover effect for the button */
         input[type="submit"]:hover {
             background-color: #6f4331; /* Slightly darker on hover */
         }
     </style>
 </head>
 <body>
-    <h1>Order Form</h1>
-    <form action="add_order.php" method="post">
+    <h1>Supplier Form</h1>
+    <form action="#" method="post">
         <table>
             <tr>
-                <td><label for="order_id">Order ID:</label></td>
-                <td><input type="number" id="order_id" name="order_id"></td>
+                <td><label for="supplier_id">Supplier ID:</label></td>
+                <td><input type="number" id="supplier_id " name="supplier_id " required></td>
             </tr>
             <tr>
-                <td><label for="product_id">Product ID:</label></td>
-                <td><input type="number" id="product_id" name="product_id" required></td>
+                <td><label for="supplier_name">Supplier Name:</label></td>
+                <td><input type="text" id="supplier_name" name="supplier_name" required></td>
             </tr>
             <tr>
-                <td><label for="order_date">Order Date:</label></td>
-                <td><input type="datetime-local" id="order_date" name="order_date" required></td>
+                <td><label for="phone_number">Phone Number:</label></td>
+                <td><input type="text" id="phone_number" name="phone_number" required></td>
+            </tr>
+            <tr>
+                <td><label for="stock_purchase_id ">Stock Purchase ID:</label></td>
+                <td><input type="number" id="stock_purchase_id  " name="stock_purchase_id  " required></td>
             </tr>
             <tr>
                 <td colspan="2" style="text-align: center;">
-                    <input type="submit" value="Add Order">
+                    <input type="submit" value="Add Customer">
                 </td>
             </tr>
         </table>
