@@ -1,3 +1,6 @@
+<?php 
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -83,3 +86,4 @@
     </form>
 </body>
 </html>
+<?php include 'includes/footer.php'; ?>
