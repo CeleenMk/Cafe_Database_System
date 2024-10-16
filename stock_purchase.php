@@ -51,7 +51,7 @@
 </head>
 <body>
     <h1>Stock Purchases Form</h1>
-    <form action="#" method="post">
+    <form action="add_stock_purchase.php" method="post">
         <table>
             <tr>
                 <td><label for="stock_purchase_id">Stock Purchase ID:</label></td>

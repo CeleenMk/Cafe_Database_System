@@ -52,7 +52,7 @@
 </head>
 <body>
     <h1>Supplier Form</h1>
-    <form action="#" method="post">
+    <form action="add_supplier.php" method="post">
         <table>
             <tr>
                 <td><label for="supplier_id">Supplier ID:</label></td>

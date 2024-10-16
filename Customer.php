@@ -52,7 +52,7 @@
 </head>
 <body>
     <h1>Customer Form</h1>
-    <form action="add_Customer.php" method="post">
+    <form action="add_customer.php" method="post">
         <table>
             <tr>
                 <td><label for="customer_id">Customer ID:</label></td>

@@ -1,4 +1,5 @@
 <?php
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -13,7 +14,7 @@
             background-color: #e4e2e2; 
         }
 
-        /* Sidebar  */
+        /* Sidebar */
         .sidebar {
             height: 100%;
             width: 250px;
@@ -57,7 +58,6 @@
             transition: 0.3s;
         }
 
-        
         .sidebar a:hover {
             background-color: #575757; 
         }
@@ -100,14 +100,15 @@
         <div class="sidebar-title">
             Dashboard
         </div>
-        <a href="employee.html" target="content-frame">Employee Management</a>
-        <a href="Customer.html" target="content-frame">Customer Management</a>
-        <a href="Transaction.html" target="content-frame">Transaction Management</a>
-        <a href="Orders.html" target="content-frame">Orders Management</a>
-        <a href="product.html" target="content-frame">Product Management</a>
-        <a href ="inventory.html" target="content-frame">Inventory Management</a>
-        <a href= "supplier.html" target="content-frame">Supplier Management</a>
-        <a href="stock_purchase.html" target="content-frame">Stock Purchases Management</a>
+        <a href="employee.php" target="content-frame">Employee Management</a>
+        <a href="customer.php" target="content-frame">Customer Management</a>
+        <a href="transaction.php" target="content-frame">Transaction Management</a>
+        <a href="order.php" target="content-frame">Orders Management</a>
+        <a href="product.php" target="content-frame">Product Management</a>
+        <a href="inventory.php" target="content-frame">Inventory Management</a>
+        <a href="supplier.php" target="content-frame">Supplier Management</a>
+        <a href="stock_purchase.php" target="content-frame">Stock Purchases Management</a>
+
     </div>
 
     <!-- Main content area -->

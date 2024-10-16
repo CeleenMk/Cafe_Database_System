@@ -51,7 +51,7 @@
 </head>
 <body>
     <h1>Inventory Form</h1>
-    <form action="#" method="post">
+    <form action="add_inventory.php" method="post">
         <table>
             <tr>
                 <td><label for="inventory_id">Inventory ID:</label></td>
