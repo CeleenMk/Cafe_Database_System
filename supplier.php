@@ -72,7 +72,7 @@
             </tr>
             <tr>
                 <td colspan="2" style="text-align: center;">
-                    <input type="submit" value="Add Customer">
+                    <input type="submit" value="Add Supplier">
                 </td>
             </tr>
         </table>

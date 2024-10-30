@@ -6,13 +6,13 @@
     <title>Customer Form</title>
     <style>
         body {
-            background-color: #e4e2e2; /* Light gray background */
+            background-color: #e4e2e2; 
             font-family: Arial, sans-serif;
         }
 
         h1 {
             text-align: center;
-            color: #333333; /* Dark gray for the title */
+            color: #333333; 
         }
 
         table {
@@ -36,7 +36,7 @@
 
         /* Button styling */
         input[type="submit"] {
-            background-color: #8b553f; /* Dark brown (matching the sidebar) */
+            background-color: #8b553f; 
             color: white;
             border: none;
             padding: 10px 20px;
@@ -46,13 +46,13 @@
 
         /* Hover effect for the button */
         input[type="submit"]:hover {
-            background-color: #6f4331; /* Slightly darker on hover */
+            background-color: #6f4331; 
         }
     </style>
 </head>
 <body>
     <h1>Customer Form</h1>
-    <form action="add_customer.php" method="post">
+    <form action="#" method="post">
         <table>
             <tr>
                 <td><label for="customer_id">Customer ID:</label></td>

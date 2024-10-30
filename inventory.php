@@ -51,7 +51,7 @@
 </head>
 <body>
     <h1>Inventory Form</h1>
-    <form action="add_inventory.php" method="post">
+    <form action="add_inventory.php" method= "post">
         <table>
             <tr>
                 <td><label for="inventory_id">Inventory ID:</label></td>
@@ -75,7 +75,7 @@
             </tr>
             <tr>
                 <td colspan="2" style="text-align: center;">
-                    <input type="submit" value="Add Customer">
+                    <input type="submit" value="Add Item">
                 </td>
             </tr>
         </table>

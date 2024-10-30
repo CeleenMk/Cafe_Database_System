@@ -51,7 +51,7 @@
 </head>
 <body>
     <h1>Order Form</h1>
-    <form action="add_order.php" method="post">
+    <form action="#" method="post">
         <table>
             <tr>
                 <td><label for="order_id">Order ID:</label></td>

@@ -51,7 +51,7 @@
 </head>
 <body>
     <h1>Transaction Form</h1>
-    <form action="add_transaction.php" method="post">
+    <form action="#" method="post">
         <table>
             <tr>
                 <td><label for="transaction_id">Transaction ID:</label></td>

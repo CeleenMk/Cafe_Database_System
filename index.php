@@ -103,7 +103,7 @@
         <a href="employee.php" target="content-frame">Employee Management</a>
         <a href="customer.php" target="content-frame">Customer Management</a>
         <a href="transaction.php" target="content-frame">Transaction Management</a>
-        <a href="order.php" target="content-frame">Orders Management</a>
+        <a href="orders.php" target="content-frame">Orders Management</a>
         <a href="product.php" target="content-frame">Product Management</a>
         <a href="inventory.php" target="content-frame">Inventory Management</a>
         <a href="supplier.php" target="content-frame">Supplier Management</a>
