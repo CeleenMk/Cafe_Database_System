@@ -3,10 +3,9 @@ CREATE TABLE Employee (
     first_name VARCHAR(15) NOT NULL,
     last_name VARCHAR(15) NOT NULL,
     role VARCHAR(25),
-    manager_id INT
-    PRIMARY KEY(employee_id)
-    FOREIGN KEY (manager_id) REFERENCES Employee(employee_id)
-        ON DELETE SET NULL
+    manager_id INT,
+    PRIMARY KEY (employee_id),
+    FOREIGN KEY (manager_id) REFERENCES Employee(employee_id) ON DELETE SET NULL
 );
 
 CREATE TABLE Customer(
