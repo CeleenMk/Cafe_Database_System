@@ -2,7 +2,7 @@
 $db_server = "localhost";
 $db_user ="root";
 $db_pass ="";
-$db_name="Cafe_Management_db";
+$db_name="cafe_management_db";
 $conn ="";
 
 $conn =mysqli_connect($db_server,
