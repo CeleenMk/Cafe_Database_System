@@ -1,0 +1,44 @@
+<?php
+// Database connection settings
+$db_server = "localhost";
+$db_user = "root";
+$db_pass = "";
+$db_name = "cafe_management_db";
+
+// Connect to the database
+$conn = mysqli_connect($db_server, $db_user, $db_pass, $db_name);
+
+// Check connection
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+}
+
+// Check if the request method is POST and if REQUEST_METHOD is set
+if (isset($_SERVER["REQUEST_METHOD"]) && $_SERVER["REQUEST_METHOD"] == "POST") {
+    $user = $_POST['username'];
+    $current_pass = $_POST['current_password'];
+    $new_pass = $_POST['new_password'];
+
+    // Secure SQL query using prepared statements
+    $stmt = $conn->prepare("UPDATE users SET password = ? WHERE username = ? AND password = ?");
+    $stmt->bind_param("sss", $new_pass, $user, $current_pass);  // "sss" means all parameters are strings
+    
+    // Execute the prepared statement
+    if ($stmt->execute()) {
+        // Check if any rows were affected
+        if ($stmt->affected_rows > 0) {
+            echo "Password updated successfully!";
+        } else {
+            echo "Invalid username or current password.";
+        }
+    } else {
+        echo "Error updating password: " . $stmt->error;
+    }
+
+    // Close the statement
+    $stmt->close();
+}
+
+// Close the database connection
+$conn->close();
+?>
