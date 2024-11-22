@@ -56,7 +56,7 @@
         <table>
             <tr>
                 <td><label for="supplier_id">Supplier ID:</label></td>
-                <td><input type="number" id="supplier_id " name="supplier_id " required></td>
+                <td><input type="number" id="supplier_id" name="supplier_id" required></td>
             </tr>
             <tr>
                 <td><label for="supplier_name">Supplier Name:</label></td>
@@ -65,10 +65,6 @@
             <tr>
                 <td><label for="phone_number">Phone Number:</label></td>
                 <td><input type="text" id="phone_number" name="phone_number" required></td>
-            </tr>
-            <tr>
-                <td><label for="stock_purchase_id ">Stock Purchase ID:</label></td>
-                <td><input type="number" id="stock_purchase_id  " name="stock_purchase_id  " required></td>
             </tr>
             <tr>
                 <td colspan="2" style="text-align: center;">

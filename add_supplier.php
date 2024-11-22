@@ -19,18 +19,16 @@ if (isset($_SERVER["REQUEST_METHOD"]) && $_SERVER["REQUEST_METHOD"] == "POST") {
     $supplier_id = $_POST['supplier_id'];
     $supplier_name = $_POST['supplier_name'];
     $phone_number = $_POST['phone_number'];
-    $stock_purchase_id = $_POST['stock_purchase_id'];
 
     // SQL query to insert data into the Supplier table
-    $sql = "INSERT INTO Supplier (supplier_id, supplier_name, phone_number, stock_purchase_id) 
-            VALUES ('$supplier_id', '$supplier_name', '$phone_number', '$stock_purchase_id')";
+    $sql = "INSERT INTO Supplier (supplier_id, supplier_name, phone_number) 
+            VALUES ('$supplier_id', '$supplier_name', '$phone_number')";
 
     if (mysqli_query($conn, $sql)) {
         echo "<h1>Supplier Added Successfully</h1>";
         echo "<p>Supplier ID: $supplier_id</p>";
         echo "<p>Supplier Name: $supplier_name</p>";
         echo "<p>Phone Number: $phone_number</p>";
-        echo "<p>Stock Purchase ID: $stock_purchase_id</p>";
     } else {
         echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }
