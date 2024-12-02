@@ -1,12 +1,8 @@
-<?php 
-
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Employee Form</title>
+    <title>Employee Management</title>
     <style>
         body {
             background-color: #e4e2e2; /* Light gray background */
@@ -30,59 +26,96 @@
             padding: 10px;
         }
 
-        input[type="text"], input[type="number"] {
+        input[type="text"], input[type="number"], select {
             padding: 10px;
             width: 100%;
             border: 1px solid #ccc;
             border-radius: 5px;
         }
 
-        /* Button styling */
         input[type="submit"] {
-            background-color: #8b553f; /* Dark brown (matching the sidebar) */
-            color: white;
-            border: none;
-            padding: 10px 20px;
+            padding: 10px;
+            width: 100%;
             border-radius: 5px;
+            border: none;
+            background-color: #8b553f; /* Dark brown */
+            color: white;
             cursor: pointer;
         }
 
-        /* Hover effect for the button */
         input[type="submit"]:hover {
-            background-color: #6f4331; /* Slightly darker on hover */
+            background-color: #6f4331; /* Slightly darker */
         }
     </style>
 </head>
 <body>
-    <h1>Employee Form</h1>
-    <form action="add_employee.php" method="post">
+    <h1>Employee Management</h1>
+    <form id="employeeForm" method="post">
         <table>
+            <!-- Employee Fields -->
             <tr>
                 <td><label for="employee_id">Employee ID:</label></td>
                 <td><input type="text" id="employee_id" name="employee_id" required></td>
             </tr>
             <tr>
                 <td><label for="first_name">First Name:</label></td>
-                <td><input type="text" id="first_name" name="first_name" required></td>
+                <td><input type="text" id="first_name" name="first_name"></td>
             </tr>
             <tr>
                 <td><label for="last_name">Last Name:</label></td>
-                <td><input type="text" id="last_name" name="last_name" required></td>
+                <td><input type="text" id="last_name" name="last_name"></td>
             </tr>
             <tr>
                 <td><label for="role">Role:</label></td>
-                <td><input type="text" id="role" name="role" required></td>
+                <td><input type="text" id="role" name="role"></td>
             </tr>
             <tr>
-                <td><label for="manager_id">Manager ID (If applicable):</label></td>
+                <td><label for="manager_id">Manager ID:</label></td>
                 <td><input type="text" id="manager_id" name="manager_id"></td>
             </tr>
+
+            <!-- Action Selector -->
+            <tr>
+                <td><label for="action">Select Action:</label></td>
+                <td>
+                    <select id="action" name="action" required>
+                        <option value="">--Select--</option>
+                        <option value="add">Add Employee</option>
+                        <option value="delete">Delete Employee</option>
+                        <option value="update">Update Employee</option>
+                        <option value="view">View Employee</option>
+
+                    </select>
+                </td>
+            </tr>
+
+            <!-- Submit Button -->
             <tr>
                 <td colspan="2" style="text-align: center;">
-                    <input type="submit" value="Add Employee">
+                    <input type="submit" value="Perform Action">
                 </td>
             </tr>
         </table>
     </form>
+
+    <script>
+        document.getElementById('employeeForm').addEventListener('submit', function (event) {
+            const action = document.getElementById('action').value;
+
+            if (action === 'add') {
+                this.action = 'add_employee.php'; // Direct to add_employee.php
+            } else if (action === 'delete') {
+                this.action = 'delete_employee.php'; // Direct to delete_employee.php
+            } else if (action === 'update') {
+                this.action = 'update_employee.php'; // Direct to update_employee.php
+            }
+            else if (action === 'view') {
+                    this.action = 'get_employee.php'; 
+            } else {
+                event.preventDefault(); // Stop submission if no action is selected
+                alert('Please select a valid action.');
+            }
+        });
+    </script>
 </body>
 </html>

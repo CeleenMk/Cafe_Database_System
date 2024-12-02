@@ -108,6 +108,7 @@
         <a href="supplier.php" target="content-frame">Supplier Management</a>
         <a href="stock_purchase.php" target="content-frame">Stock Purchases Management</a>
 
+
     </div>
 
     <!-- Main content area -->

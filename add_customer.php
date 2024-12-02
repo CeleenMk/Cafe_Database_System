@@ -22,7 +22,11 @@ if (isset($_SERVER['REQUEST_METHOD']) && $_SERVER['REQUEST_METHOD'] == "POST") {
             VALUES ('$customer_id', '$first_name', '$last_name', '$points')";
 
     if (mysqli_query($conn, $sql)) {
-        echo "New customer added successfully!";
+        echo "<h1>New customer added successfully!</h1>";
+        echo "<p>Customer ID: $customer_id</p>";
+        echo "<p>First Name: $first_name</p>";
+        echo "<p>Last Name: $last_name</p>";
+        echo "<p>points: $points</p>";
     } else {
         echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }
