@@ -60,22 +60,21 @@
     ini_set('display_startup_errors', 1);
     error_reporting(E_ALL);
 
-    // Redirect based on the selected action
     if (isset($_GET['action'])) {
         $action = $_GET['action'];
 
         switch ($action) {
             case 'add':
-                header('Location: add_employee.php'); // Ensure this file exists
+                header('Location: add_employee.php'); 
                 break;
             case 'view':
-                header('Location: view_employee.php'); // Ensure this file exists
+                header('Location: view_employee.php'); 
                 break;
             case 'update':
-                header('Location: update_employee.php'); // Ensure this file exists
+                header('Location: update_employee.php'); 
                 break;
             case 'delete':
-                header('Location: delete_employee.php'); // Ensure this file exists
+                header('Location: delete_employee.php'); 
                 break;
             default:
                 echo "<p style='text-align: center; color: red;'>Invalid action!</p>";
